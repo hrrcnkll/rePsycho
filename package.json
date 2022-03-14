@@ -1,0 +1,37 @@
+{
+  "name": "repsycho",
+  "version": "1.0.0",
+  "description": "rePsycho",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "vk",
+    "vk-miniapp",
+    "psychological_tests",
+    "react",
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "github: hrrcnkll",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-favicon": "^2.0.1",
+    "mongoose": "^6.1.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.5.0",
+    "nodemon": "^2.0.15"
+  }
+}
